@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    height:80vh;
+    width: 100vw;
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    gap: 50px;
+
+
+}
+#side{
+    width: 25%;
+    border: 1px solid #121212;
+    border-radius: 73px;
+    margin-left: 35px;
+    background-color:  #121212
+;
+
+}
+#mainContainer{
+    width: 73.5%;
+    background-color: #121212;
+    border: 1px solid #121212;
+    border-radius: 70px;
+}
+
+#heading{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 60px;
+    position: relative;
+    left: 50px;
+    top: 30px;
+    border: 1px solid white;
+    border-radius: 65px;
+    width: 150px;
+    height: 120px;
+    padding-top: 25px;
+    padding-left: 35px;
+    background-color: white;
+}
+ #songList{
+
+
+    height: 90%;
+    overflow-y: auto;
+    position: relative;
+    top: 35px;
+
+
+
+} 
+#songList::-webkit-scrollbar{
+    
+    height: 8px;
+    width: 50px;
+    
+
+}
+#songList::-webkit-scrollbar-track{
+    background-color:#121212;
+}
+#songList::-webkit-scrollbar-thumb{
+    background-color:white;
+    
+}
+#songList::-webkit-scrollbar-thumb:hover{
+    background-color:rgba(173, 163, 163, 0.664);
+}
+#listItem{
+    width: 100%;
+    height: 330px;
+    background-color: #121212 ;
+    margin-top: 20px;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 30px;
+    cursor: pointer;
+
+    
+
+}
+#listItem:hover{
+    background-color: #444242;
+
+}
+
+.img{
+    width: 300px;
+    height: 250px;
+    border-radius: 15px;
+
+}
+.titleHeading{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 70px;
+    color: white;
+
+}
+.subHeading{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 50px;
+    color: white;
+
+}
+#controlContainer{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+    
+
+}
+#controls button{
+    margin: 55px;
+    
+}
+
+#backwardBtn{
+    width: 140px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#pauseResumeBtn{
+    width: 120px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#forwardBtn{
+    width: 140px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+/* #volumeBtn{
+    width: 140px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    gap: 30px;
+    
+
+} */
+#progressContainer{
+    width: 85%;
+    height: 25px;
+    background-color: #444;
+    border-radius: 5px;
+    position: relative;
+    top: 38%;
+    left: 8%;
+    
+}
+.progressBar{
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    border-radius: 5px;
+}
+#imgContainer{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    height: 45%;
+
+    
+    
+}
+.trackImg{
+    width: 100%;
+    height: 90%;
+}
