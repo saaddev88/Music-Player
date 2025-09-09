@@ -21,6 +21,7 @@ body{
     width: 100vw;
     display: flex;
     gap: 15px;
+    margin-right: 5px;
 
 
 }
