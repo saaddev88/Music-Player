@@ -75,7 +75,10 @@ allSong.forEach((song,i)=>{
         player.play()
         trackImg.src = song.songImg
         currentSong = i
-        pauseResumeBtn.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" fill = "white" viewBox="0 0 750 750"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M176 96C149.5 96 128 117.5 128 144L128 496C128 522.5 149.5 544 176 544L240 544C266.5 544 288 522.5 288 496L288 144C288 117.5 266.5 96 240 96L176 96zM400 96C373.5 96 352 117.5 352 144L352 496C352 522.5 373.5 544 400 544L464 544C490.5 544 512 522.5 512 496L512 144C512 117.5 490.5 96 464 96L400 96z"/></svg>`
+        pauseResumeBtn.innerHTML =             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+        <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
+      </svg>`
+    
         durationUpdater()
         
 
@@ -87,6 +90,9 @@ allSong.forEach((song,i)=>{
         currentSong--
         player.src = song.songLink
         player.play()
+        pauseResumeBtn.innerHTML =             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+        <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
+      </svg>`
         trackImg.src = song.songImg
         durationUpdater()
     }
@@ -98,6 +104,9 @@ allSong.forEach((song,i)=>{
         currentSong++
         player.src = song.songLink
         player.play()
+        pauseResumeBtn.innerHTML =             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+        <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
+      </svg>`
         trackImg.src = song.songImg
         durationUpdater()
 
@@ -131,13 +140,20 @@ const pauseResumeBtn = document.getElementById("pauseResumeBtn")
 let isnotPlaying = false
 pauseResumeBtn.addEventListener('click',()=>{
 if(isnotPlaying){
-    pauseResumeBtn.innerHTML =  `<svg xmlns="http://www.w3.org/2000/svg" id=""  fill ="white" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>`   
+    pauseResumeBtn.innerHTML =   ` <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+        <path d="M96 52v408l320-204L96 52z"/>
+      </svg> `
     player.pause()
                 
 
 } 
 else{
-    pauseResumeBtn.innerHTML =  `<svg xmlns="http://www.w3.org/2000/svg"  id="pause"  fill = "white" viewBox="0 0 750 750"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M176 96C149.5 96 128 117.5 128 144L128 496C128 522.5 149.5 544 176 544L240 544C266.5 544 288 522.5 288 496L288 144C288 117.5 266.5 96 240 96L176 96zM400 96C373.5 96 352 117.5 352 144L352 496C352 522.5 373.5 544 400 544L464 544C490.5 544 512 522.5 512 496L512 144C512 117.5 490.5 96 464 96L400 96z"/></svg> `
+    pauseResumeBtn.innerHTML = 
+       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+        <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
+      </svg>` 
+
+
     player.play()
 } 
 isnotPlaying = !isnotPlaying  
