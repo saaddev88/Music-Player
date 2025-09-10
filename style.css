@@ -237,7 +237,7 @@ body{
         padding: 0;
     }
     body{
-        height: 100vh;
+        height: 98vh;
     }
     #container{
         flex-direction: column;
