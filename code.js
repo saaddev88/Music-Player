@@ -75,44 +75,15 @@ allSong.forEach((song,i)=>{
         player.play()
         trackImg.src = song.songImg
         currentSong = i
-        pauseResumeBtn.innerHTML =             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+        pauseResumeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
         <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
-      </svg>`
+        </svg>`
     
         durationUpdater()
         
 
     })
-    const backwardBtn = document.getElementById("backwardBtn")
-    backwardBtn.addEventListener('click',()=>{
-    currentSong = i
-    if(currentSong >0 && currentSong <=9){
-        currentSong--
-        player.src = song.songLink
-        player.play()
-        pauseResumeBtn.innerHTML =             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
-        <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
-      </svg>`
-        trackImg.src = song.songImg
-        durationUpdater()
-    }
-})
-    const forwardBtn = document.getElementById("forwardBtn")
-    forwardBtn.addEventListener("click",()=>{
-    currentSong = i
-    if(currentSong >=0 && currentSong <9){
-        currentSong++
-        player.src = song.songLink
-        player.play()
-        pauseResumeBtn.innerHTML =             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
-        <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
-      </svg>`
-        trackImg.src = song.songImg
-        durationUpdater()
 
-    }
-
-})
     listItem.id = "listItem"
     
    const img = document.createElement("img")
@@ -177,3 +148,31 @@ const durationUpdater = function(){ player.addEventListener('timeupdate',()=>{
 //     let percentage = (player.currentTime / player.duration)*100
 //     progressBar.style.width = percentage + '%' 
 // }
+const backwardBtn = document.getElementById("backwardBtn")
+backwardBtn.addEventListener('click',()=> {
+    if(currentSong >0 && currentSong <=9) {
+        currentSong--
+        player.src = allSong[currentSong].songLink
+        player.play()
+        pauseResumeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+        <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
+        </svg>`
+        trackImg.src = allSong[currentSong].songImg
+        durationUpdater()
+    }
+})
+const forwardBtn = document.getElementById("forwardBtn")
+forwardBtn.addEventListener("click",() => {
+    if(currentSong >= 0 && currentSong < 9){
+            currentSong++
+            player.src = allSong[currentSong].songLink
+            player.play()
+            pauseResumeBtn.innerHTML =       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+            <path d="M96 64h96v384H96zm224 0h96v384h-96z"/>
+            </svg>`
+            trackImg.src = allSong[currentSong].songImg
+            durationUpdater()
+
+    }
+
+})
